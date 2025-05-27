@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // + 버튼 → 글쓰기 페이지로 이동
   writeBtn.addEventListener("click", () => {
-    window.location.href = "write.html";
+    const currentCategory = document.querySelector("nav button.active")?.dataset.category;
+    // URL에 category 파라미터 추가
+    window.location.href = `write.html?category=${encodeURIComponent(currentCategory)}`;
   });
 
   // 카테고리 버튼 클릭 → 해당 글목록 표시 + active
@@ -53,4 +55,20 @@ document.addEventListener("DOMContentLoaded", () => {
     firstBtn.classList.add("active");
     renderPosts(firstBtn.getAttribute("data-category"));
   }
+
+  const params = new URLSearchParams(window.location.search);
+  const initialCategory = params.get("category");
+
+  if (initialCategory) {
+    renderPosts(initialCategory);
+
+    // nav 버튼 active 처리
+    document.querySelectorAll("nav button").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.category === initialCategory);
+    });
+  } else {
+    renderPosts(category); // 기본값
+  }
+
+
 });

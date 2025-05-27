@@ -23,8 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteBtn.style.display = "none";
   }
 
+  //뒤로 가기 버튼 눌렀을 때, 이전 상태 active로
   backBtn.addEventListener("click", () => {
-    window.history.back();
+    window.location.href = `index.html?category=${encodeURIComponent(category)}`;
   });
 
   deleteBtn.addEventListener("click", () => {
