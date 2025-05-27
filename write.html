@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>글쓰기</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container write-container">
+    <div class="top-buttons">
+      <button id="back-button">← 뒤로가기</button>
+      <button id="submit-button">제출</button>
+    </div>
+
+    <h2>글쓰기</h2>
+
+    <input type="text" id="title-input" placeholder="제목을 입력하세요" autocomplete="off" />
+
+    <select id="category-select">
+      <option value="명랑">명랑</option>
+      <option value="반딧불">반딧불</option>
+      <option value="별빛">별빛</option>
+    </select>
+
+    <input type="text" id="date-input" readonly />
+
+    <textarea id="content-input" rows="10" placeholder="내용을 입력하세요"></textarea>
+  </div>
+
+  <script src="write.js" defer></script>
+
+</body>
+
+</html>

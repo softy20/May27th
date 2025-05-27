@@ -1,0 +1,205 @@
+/* 전체 폰트와 배경 스타일 */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #007BFF;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* 네비게이션 버튼 */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+nav button {
+  background-color: white;
+  color: #1584fc;
+  border: 2px solid #1584fc;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #0061c9;
+  color: white;
+}
+
+nav button.active {
+  background-color: #0061c9;
+  color: white;
+  box-shadow: 0 0 8px rgba(37, 142, 255, 0.6);
+}
+
+/* 게시글 리스트 */
+main#post-list {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+main#post-list div {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+main#post-list h3 {
+  margin: 0 0 10px;
+  color: #007BFF;
+}
+
+main#post-list p {
+  margin: 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* + 버튼 (글쓰기) */
+#write-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+#write-button:hover {
+  background-color: #0056b3;
+}
+
+/* 공통 컨테이너 스타일 */
+.container {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 400px;
+  position: relative;
+  text-align: left;
+}
+
+.write-container {
+  background-color: #fff;
+}
+
+.detail-container {
+  max-width: 600px;
+  padding: 40px 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.detail-container h2 {
+  margin-bottom: 10px;
+  color: #007BFF;
+  padding-bottom: 6px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+#detail-date {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+#detail-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* 상단 버튼 (제출, 뒤로가기, 삭제) */
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.top-buttons button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.top-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* 삭제 버튼 색상 */
+#delete-button {
+  background-color: #dc3545;
+}
+
+#delete-button:hover {
+  background-color: #a71d2a;
+}
+
+/* 입력 필드 스타일 */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* 읽기 전용 날짜 필드 */
+input[readonly] {
+  background-color: #f5f5f5;
+  color: #888;
+  border: 1px solid #ccc;
+  cursor: not-allowed;
+}
+
+/* 상세 내용 줄바꿈 유지 */
+#detail-content {
+  white-space: pre-wrap;
+  color: #333;
+  line-height: 1.5;
+}
